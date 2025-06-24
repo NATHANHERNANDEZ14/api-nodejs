@@ -37,9 +37,9 @@ app.use("/api", iaRoutes);
 ///////////////////////Aqui termina los endpoints dela ia
 // Conexión a MongoDB
 const mongoURI = process.env.MONGO_URI;
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('Conexión a MongoDB exitosa'))
-    .catch((err) => console.error('Error al conectar a MongoDB:', err));
+mongoose.connect(mongoURI)
+  .then(() => console.log('✅ Conexión a MongoDB exitosa'))
+  .catch((err) => console.error('❌ Error al conectar a MongoDB:', err));
 
 // Puerto del servidor
 const PORT = process.env.PORT || 5000;
